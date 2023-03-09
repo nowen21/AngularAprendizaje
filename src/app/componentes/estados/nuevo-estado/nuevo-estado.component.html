@@ -1,0 +1,44 @@
+<h1>NUEVO ESTADO</h1>
+
+<form [formGroup]="heroForm" (ngSubmit)="nuevoEstado()" #formDir="ngForm">
+    <div class="mb-12 mt-13 cross-validation"
+        [class.cross-validation-error]="heroForm.errors?.['identityRevealed'] && (heroForm.touched || heroForm.dirty)">
+        <div class="form-group">
+
+            <label for="estado">Estado</label>
+            <input type="text" id="estado" class="form-control" formControlName="estado" required>
+
+            <div *ngIf="estado.invalid && (estado.dirty || estado.touched)" class="alert alert-danger">
+
+                <div *ngIf="estado.errors?.['required']">
+                    El nombre del estado es requerido
+                </div>
+                <div *ngIf="estado.errors?.['minlength']">
+                    El nombre del estado debe estar entre 6 y 8 caracteres
+                </div>
+                <div *ngIf="estado.errors?.['forbiddenName']">
+                    Name cannot be Bob.
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Crear</button>
+    <button type="button" class="btn btn-primary" (click)="limpiarFormulario()">Lipiar</button>
+</form>
+
+<app-listado-estado></app-listado-estado>  
+
+<!-- <h3>formulario</h3>
+
+Estado formulario {{heroForm.valid}}
+<br>
+Status {{heroForm.valid}}
+<br>
+{{heroForm.errors}}
+<pre>
+
+    {{heroForm.value|json}}
+</pre> -->
