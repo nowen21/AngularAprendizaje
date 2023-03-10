@@ -1,0 +1,93 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">PRODUCTO</th>
+            <th scope="col">PRECIO</th>
+            <th scope="col">DESCRIPCI&Oacute;N</th>
+            <th scope="col">ACCIONES</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <th scope="row">{{ product.id }}</th>
+            <td>{{ product.name }}</td>
+            <td>$ {{ product.price }}</td>
+            <td>
+                <p *ngIf="product.description">
+                    {{ product.description }}
+                </p>
+            </td>
+            <td>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <a [title]="product.name + ' details'" class="btn btn-outline-primary btn-sm">
+                        {{ product.name }}
+                    </a>
+
+                    <button type="button" (click)="share()" class="btn btn-outline-primary btn-sm">
+                        Compartir
+                    </button>
+
+                    <!--El padre le pasa informacion al hijo: [product]="product" -->
+                    <app-product-alerts
+                    [product]="product" 
+                    (notify)="onNotify()"
+                    >
+                  </app-product-alerts>
+                </div>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+<!-- <div class="row table table-bordered" >
+
+    <div class="col-2">
+        ID
+    </div>
+    <div class="col-2">
+        PRODUCTO
+    </div>
+    <div class="col-2">
+        PRECIO
+    </div>
+    <div class="col-4">
+        DESCRIPCI&Oacute;N
+    </div>
+    <div class="col-2">
+       ACCIONES
+    </div>
+
+</div>
+
+    <div class="row table table-bordered" *ngFor="let product of products">
+
+        <div class="col-2">
+            ID
+        </div>
+        <div class="col-2">
+            <h3>
+                <a [title]="product.name + ' details'" class="btn btn-info">
+                    {{ product.name }}
+                </a>
+            </h3>
+        </div>
+        <div class="col-2">
+            {{ product.price }}
+        </div>
+        <div class="col-4">
+            <p *ngIf="product.description">
+                {{ product.description }}
+            </p>
+        </div>
+        <div class="col-2">
+            <a [title]="product.name + ' details'" class="btn btn-info">
+                {{ product.name }}
+            </a>
+            <button type="button" (click)="share()" class="btn btn-primary">
+                Share
+            </button>
+        </div>
+
+    </div> -->
