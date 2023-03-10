@@ -36,4 +36,12 @@ COMANDOS UTILIZADOS
 32. npm install -g jasmine@VERSION_NUMBER // Instalar versión específica de Jasmine
 33. npm install -g karma@VERSION_NUMBER // Instalar versiún específica de Karma
 
+EJERCICIOS CREADOS
+
+AngularAprendizaje
+
+*|______prubalo
+
+Se crea proyecto para realizar el ejercicio pruebalo que es el que viene propuesto por angular para conocerlo y este se encuentra en la carpeta: pruebalo
+
 
