@@ -39,9 +39,5 @@ COMANDOS UTILIZADOS
 EJERCICIOS CREADOS
 
 AngularAprendizaje
-
-*|______prubalo
-
-Se crea proyecto para realizar el ejercicio pruebalo que es el que viene propuesto por angular para conocerlo y este se encuentra en la carpeta: pruebalo
-
-
+* |----> pruebalo
+* |
