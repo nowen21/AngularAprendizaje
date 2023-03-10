@@ -19,6 +19,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from "@angular/common/http";
 import { ApiEstadoService } from './servicios/api/api-estado.service';
+
+// rutas que se van a manejar en la aplicación
 const appRoutes: Routes = [
   { path: '', component: NuevoEstadoComponent },
  // { path: 'nuevo-estado', component: NuevoEstadoComponent },
@@ -36,6 +38,7 @@ const appRoutes: Routes = [
     ListadoTransaccComponent,
 
   ],
+  // Liberías que van a utilizar 
   imports: [
     BrowserModule,
     NgbModule,
@@ -48,6 +51,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpClientModule
   ],
+  // registar los servicios que se crean
   providers: [ApiEstadoService],
   bootstrap: [AppComponent]
 })
