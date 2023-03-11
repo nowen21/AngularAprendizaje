@@ -5,6 +5,7 @@ import { ProductAlertsComponent } from './components/product-alerts/product-aler
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { CartComponent } from './components/cart/cart.component';
 import { LayoutsModule } from '../layouts/layouts.module';
+import { ShippingComponent } from './components/shipping/shipping.component';
 
 
 /**
@@ -16,6 +17,7 @@ import { LayoutsModule } from '../layouts/layouts.module';
     ProductAlertsComponent,
     ProductDetailsComponent,
     CartComponent,
+    ShippingComponent,
   ],
   imports: [
     CommonModule,
