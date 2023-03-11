@@ -4,6 +4,7 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProductAlertsComponent } from './components/product-alerts/product-alerts.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { RouterModule, Routes } from '@angular/router';
+import { CartComponent } from './components/cart/cart.component';
 
 const app_routes: Routes = [
   
@@ -18,6 +19,7 @@ const app_routes: Routes = [
     ProductListComponent,
     ProductAlertsComponent,
     ProductDetailsComponent,
+    CartComponent,
   ],
   imports: [
     CommonModule,
