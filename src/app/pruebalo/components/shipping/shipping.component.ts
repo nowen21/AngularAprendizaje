@@ -7,5 +7,5 @@ import { CartService } from '../../servicios/cart.service';
   styleUrls: ['./shipping.component.css']
 })
 export class ShippingComponent {
-  
+  constructor(private cartService: CartService) { }
 }
