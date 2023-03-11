@@ -28,7 +28,13 @@ const app_routes: Routes = [
   // importar la funcionalidad que se exporta desde otros NgModules
   imports: [
     CommonModule,
-    RouterModule.forRoot(app_routes)
+    RouterModule.forRoot(app_routes,{
+      /**
+       * Indicarle a los navegadores que después del # no es un directorio ni sitio web sino que hace parte de la ruta del index.html que
+       * se encuentra en esa dirección, con el fin de poder desplegar en servidores donde no se tiene acceso al .htaccess
+       */
+      useHash:true // se le indica a la aplicación 
+    })
   ],
   // exportar la funcionalidad seleccionada para que la utilicen otros NgModules.
   exports: [
