@@ -6,6 +6,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { CartComponent } from './components/cart/cart.component';
 import { LayoutsModule } from '../layouts/layouts.module';
 import { ShippingComponent } from './components/shipping/shipping.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 /**
@@ -22,6 +23,8 @@ import { ShippingComponent } from './components/shipping/shipping.component';
   imports: [
     CommonModule,
     LayoutsModule,
+    ReactiveFormsModule,
+    FormsModule,
   ]
 })
 export class PruebaloModule { }
