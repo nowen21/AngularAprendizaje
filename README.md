@@ -36,9 +36,44 @@ COMANDOS UTILIZADOS
 32. npm install -g jasmine@VERSION_NUMBER // Instalar versión específica de Jasmine
 33. npm install -g karma@VERSION_NUMBER // Instalar versiún específica de Karma
 
+
+COMPONENTE:
+
+Un componente controla una parte en pantalla llamada vista
+
+El decorador @Component identifica la clase inmediatamente debajo de ella como una clase de componente y especifica sus metadatos.
+
+Los metadatos de un componente le dicen a Angular dónde obtener los bloques de construcción principales que necesita para crear y presentar el componente y su vista. En particular, asocia una plantilla con el componente, ya sea directamente con el código en línea o por referencia. Juntos, el componente y su plantilla describen una vista.
+
+PARTES:
+
+* selector: Un selector de CSS que le dice a Angular que cree e inserte una instancia de este componente siempre que encuentre la etiqueta correspondiente en la plantilla HTML. Por ejemplo, si el HTML de una aplicación contiene <app-hero-list></app-hero-list>, entonces Angular inserta una instancia de la vista HeroListComponent entre esas etiquetas.
+* templateUrl: La dirección relativa al módulo de la plantilla HTML de este componente. Alternativamente, puede proporcionar la plantilla HTML en línea, como el valor de la propiedad template. Esta plantilla define la vista host del componente.
+
+* proveedores: Un array de proveedores para los servicios que requiere el componente. En el ejemplo, esto le dice a Angular cómo proporcionar la instancia de HeroService que el constructor del componente usa para obtener la lista de héroes para mostrar.
+
+Fuente: https://docs.angular.lat/guide/architecture-components
+
+MODULO:
+
+Los NgModules son contenedores para un bloque cohesivo de código dedicado a un dominio de aplicación, un flujo de trabajo o un conjunto de capacidades estrechamente relacionadas. Pueden contener componentes, proveedores de servicios y otros archivos de código cuyo alcance está definido por el NgModule que los contiene.
+
+Una aplicación al menos tiene un módulo que es el módulo raiz
+
+PARTES DEL MÓDULO
+
+* declarations: Los componentes, directivas, y pipes que pertenecen a este NgModule.
+* exports: El subconjunto de declaraciones que deberían ser visibles y utilizables en las plantillas de componentes de otros NgModules.
+* imports: Otros módulos cuyas clases exportadas son necesarias para las plantillas de componentes declaradas en este NgModule.
+* providers: Creadores de servicios que este NgModule aporta a la colección global de servicios; se vuelven accesibles en todas las partes de la aplicación. (También puedes especificar proveedores a nivel de componente, que a menudo es preferido).
+* bootstrap: La vista principal de la aplicación, llamado el componente raíz, que aloja todas las demás vistas de la aplicación. Sólo el NgModule raíz debe establecer la propiedad bootstrap.
+
+Fuente: https://docs.angular.lat/guide/architecture-modules
+
 EJERCICIOS CREADOS
 
 AngularAprendizaje
 * |----> pruebalo 
 * |--------> se realiza el ejercio de crear el proyecto, crar el componente lista de productos, pasar data a un componente hijo y pasar información a un componente padre. Se realiza modificación utilizando una tabla bootstrap y se le da formato a los botones
 * |--------> se raliza configuración de una plantilla html para darle mejor formato al proyecto
+* |--------> Se agregan las rutas desde el nuevo módulo creado(LayoutsModule)
