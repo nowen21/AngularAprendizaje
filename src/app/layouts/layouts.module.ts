@@ -8,6 +8,7 @@ import { ListadoEstadoComponent } from '../componentes/estados/listado-estado/li
 import { ProductListComponent } from '../pruebalo/components/product-list/product-list.component';
 import { ProductDetailsComponent } from '../pruebalo/components/product-details/product-details.component';
 import { CartComponent } from '../pruebalo/components/cart/cart.component';
+import { ShippingComponent } from '../pruebalo/components/shipping/shipping.component';
 
 
 const app_routes: Routes = [
@@ -17,6 +18,7 @@ const app_routes: Routes = [
   { path: 'pruebelo', component: ProductListComponent },
   { path: 'products/:productId', component: ProductDetailsComponent }, // mostrar el detalle del producto
   { path: 'cartxxxx', component: CartComponent },
+  { path: 'shipping', component: ShippingComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home' },
 ];
 
