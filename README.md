@@ -39,6 +39,6 @@ COMANDOS UTILIZADOS
 EJERCICIOS CREADOS
 
 AngularAprendizaje
-* |----> pruebalo // se realiza el ejercio de crear el proyecto, crar el componente lista de productos, pasar data a un componente hijo y
-                     pasar información a un componente padre. Se realiza modificación utilizando una tabla bootstrap y se le da formato a los botones
+* |----> pruebalo 
+* |--------> se realiza el ejercio de crear el proyecto, crar el componente lista de productos, pasar data a un componente hijo y pasar información a un componente padre. Se realiza modificación utilizando una tabla bootstrap y se le da formato a los botones
 * |

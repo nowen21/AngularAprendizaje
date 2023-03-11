@@ -22,6 +22,10 @@ import { ApiEstadoService } from './servicios/api/api-estado.service';
 import { ProductListComponent } from './pruebalo/components/product-list/product-list.component';
 import { ProductAlertsComponent } from './pruebalo/components/product-alerts/product-alerts.component';
 import { TopBarComponent } from './componentes/top-bar/top-bar.component';
+import { ProductDetailsComponent } from './pruebalo/components/product-details/product-details.component';
+import { LayoutsModule } from './layouts/layouts.module';
+
+
 
 // rutas que se van a manejar en la aplicación
 const appRoutes: Routes = [
@@ -29,6 +33,7 @@ const appRoutes: Routes = [
  // { path: 'nuevo-estado', component: NuevoEstadoComponent },
   { path: 'listado-estado', component: ListadoEstadoComponent },
   { path: 'pruebelo', component: ProductListComponent },
+  { path: 'products/:productId', component: ProductDetailsComponent }, // mostrar el detalle del producto
 ];
 
 @NgModule({
@@ -43,6 +48,9 @@ const appRoutes: Routes = [
     ListadoTransaccComponent,
     ProductListComponent,
     ProductAlertsComponent,
+    ProductDetailsComponent,
+ 
+ 
     
   ],
   // Liberías que van a utilizar 
@@ -56,7 +64,8 @@ const appRoutes: Routes = [
     ToastrModule.forRoot(), // ToastrModule added
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    LayoutsModule
   ],
   // registar los servicios que se crean
   providers: [ApiEstadoService],

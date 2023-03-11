@@ -1,46 +1,44 @@
 <!-- ======= Header ======= -->
 <header id="header" class="header d-flex align-items-center">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+  <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-        <a href="index.html" class="logo d-flex align-items-center">
-            <!-- Uncomment the line below if you also wish to use an image logo -->
-            <!-- <img src="assets/img/logo.png" alt=""> -->
-            <h1>UpConstruction<span>.</span></h1>
-        </a>
+    <a href="index.html" class="logo d-flex align-items-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1>UpConstruction<span>.</span></h1>
+    </a>
 
-        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-        <nav id="navbar" class="navbar">
-            <ul>
-                <li><a href="" class="active">Estados</a></li>
-                <li><a href="tipotarj">Tipo tarjetas</a></li>
-                <li><a href="tarjetax">Tarjetas</a></li>
-                <li><a href="transacc">Transacciones</a></li>
-                <li><a href="pruebelo">Pruébelo</a></li>
-            </ul>
-        </nav><!-- .navbar -->
+    <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+    <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    <app-navbar></app-navbar>
 
-    </div>
+
+  </div>
 </header><!-- End Header -->
 
 <main id="main">
-    <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
-        <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
-            <h2>Services</h2>
-            <ol>
-                <li><a href="index.html">Home</a></li>
-                <li>Services</li>
-            </ol>
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+    <div class="container position-relative d-flex flex-column align-items-center">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li>Sample Inner Page</li>
+      </ol>
 
-        </div>
-    </div><!-- End Breadcrumbs -->
+    </div>
+  </div><!-- End Breadcrumbs -->
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
-        <div class="container" data-aos="fade-up">
-            <router-outlet></router-outlet>
-        </div>
-    </section><!-- End Services Section -->
+  <section class="sample-page">
+    <div class="container">
+
+      <router-outlet></router-outlet>
+
+    </div>
+  </section>
+
 </main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<app-footer></app-footer>
+<!-- End Footer -->

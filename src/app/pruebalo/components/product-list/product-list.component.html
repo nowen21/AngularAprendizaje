@@ -20,7 +20,9 @@
             </td>
             <td>
                 <div class="btn-group" role="group" aria-label="Basic example">
-                    <a [title]="product.name + ' details'" class="btn btn-outline-primary btn-sm">
+                    <a [title]="product.name + ' details'" class="btn btn-outline-primary btn-sm"
+                    [routerLink]="['/products', product.id]"
+                    >
                         {{ product.name }}
                     </a>
 
