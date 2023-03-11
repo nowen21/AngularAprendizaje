@@ -18,11 +18,9 @@ import { ToastrModule } from 'ngx-toastr';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from "@angular/common/http";
 import { ApiEstadoService } from './servicios/api/api-estado.service';
-import { ProductListComponent } from './pruebalo/components/product-list/product-list.component';
-import { ProductAlertsComponent } from './pruebalo/components/product-alerts/product-alerts.component';
 import { TopBarComponent } from './componentes/top-bar/top-bar.component';
-import { ProductDetailsComponent } from './pruebalo/components/product-details/product-details.component';
 import { LayoutsModule } from './layouts/layouts.module';
+import { PruebaloModule } from './pruebalo/pruebalo.module';
 
 
 /**
@@ -42,9 +40,7 @@ import { LayoutsModule } from './layouts/layouts.module';
     ListadoTarjetaComponent,
     ListadoTipotarjComponent,
     ListadoTransaccComponent,
-    ProductListComponent,
-    ProductAlertsComponent,
-    ProductDetailsComponent,
+    
   ],
   // Otros módulos cuyas clases exportadas son necesarias para las plantillas de componentes declaradas en este NgModule
   imports: [
@@ -58,7 +54,8 @@ import { LayoutsModule } from './layouts/layouts.module';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    LayoutsModule
+    LayoutsModule,
+    PruebaloModule
   ],
   /**
    * Creadores de servicios que este NgModule aporta a la colección global de servicios; se vuelven accesibles en todas las partes de la aplicación. 
