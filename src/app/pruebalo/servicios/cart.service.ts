@@ -7,8 +7,8 @@ import { Product } from '../components/products';
 })
 export class CartService {
   items: Product[] = [];
-  constructor() { }
-  
+  constructor(private http: HttpClient) { }
+
   /**
    * Agragar un producto
    * @param product 
@@ -32,6 +32,14 @@ export class CartService {
   clearCart() {
     this.items = [];
     return this.items;
+  }
+
+  /**
+   * recuperar precios
+   * @returns 
+   */
+  getShippingPrices() {
+    return this.http.get<{ type: string, price: number }[]>('/assets/data/pruebalo/shipping.json');
   }
 
 }
