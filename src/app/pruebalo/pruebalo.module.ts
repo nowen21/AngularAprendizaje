@@ -10,6 +10,7 @@ const app_routes: Routes = [
   
   { path: 'pruebelo', component: ProductListComponent },
   { path: 'products/:productId', component: ProductDetailsComponent }, // mostrar el detalle del producto
+  { path: 'cartxxxx', component: CartComponent },
 ];
 /**
  * Módulo en donde se realiza todo el ejercicio propusto en la documentación de angular en la sección: Getting started->Try it
