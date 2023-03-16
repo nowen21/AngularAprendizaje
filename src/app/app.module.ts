@@ -21,6 +21,9 @@ import { ApiEstadoService } from './servicios/api/api-estado.service';
 import { TopBarComponent } from './componentes/top-bar/top-bar.component';
 import { LayoutsModule } from './layouts/layouts.module';
 import { PruebaloModule } from './pruebalo/pruebalo.module';
+import { LifecycleModule } from './componentes/lifecycle/lifecycle.module';
+import { LoggerService } from './componentes/lifecycle/services/logger.service';
+
 
 
 /**
@@ -40,7 +43,8 @@ import { PruebaloModule } from './pruebalo/pruebalo.module';
     ListadoTarjetaComponent,
     ListadoTipotarjComponent,
     ListadoTransaccComponent,
-    
+
+
   ],
   // Otros módulos cuyas clases exportadas son necesarias para las plantillas de componentes declaradas en este NgModule
   imports: [
@@ -55,13 +59,17 @@ import { PruebaloModule } from './pruebalo/pruebalo.module';
     FormsModule,
     HttpClientModule,
     LayoutsModule,
-    PruebaloModule
+    PruebaloModule,
+    LifecycleModule
   ],
   /**
    * Creadores de servicios que este NgModule aporta a la colección global de servicios; se vuelven accesibles en todas las partes de la aplicación. 
    * (También puedes especificar proveedores a nivel de componente, que a menudo es preferido).
    */
-  providers: [ApiEstadoService],
+  providers: [
+    ApiEstadoService,
+    LoggerService
+  ],
   /**
    * La vista principal de la aplicación, llamado el componente raíz, que aloja todas las demás vistas de la aplicación. Sólo el NgModule raíz debe establecer 
    * la propiedad bootstrap.

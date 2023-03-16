@@ -9,17 +9,25 @@ import { ProductListComponent } from '../pruebalo/components/product-list/produc
 import { ProductDetailsComponent } from '../pruebalo/components/product-details/product-details.component';
 import { CartComponent } from '../pruebalo/components/cart/cart.component';
 import { ShippingComponent } from '../pruebalo/components/shipping/shipping.component';
+import { PadreComponent } from '../componentes/lifecycle/ngonchanges/padre/padre.component';
+import { DoCheckParentComponent } from '../componentes/lifecycle/ngdocheck/do-check-parent/do-check-parent.component';
+import { AfterContentInitParentComponent } from '../componentes/lifecycle/aftercontentinit/after-content-init-parent/after-content-init-parent.component';
+
+
 
 
 const app_routes: Routes = [
-  { path: 'home', component: NuevoEstadoComponent },
+  // { path: 'home', component: NuevoEstadoComponent },
   // { path: 'nuevo-estado', component: NuevoEstadoComponent },
-  { path: 'listado-estado', component: ListadoEstadoComponent },
+  // { path: 'listado-estado', component: ListadoEstadoComponent },
   { path: 'pruebelo', component: ProductListComponent },
   { path: 'products/:productId', component: ProductDetailsComponent }, // mostrar el detalle del producto
   { path: 'cartxxxx', component: CartComponent },
   { path: 'shipping', component: ShippingComponent },
-  { path: '**', pathMatch: 'full', redirectTo: 'home' },
+  { path: 'onchange', component: PadreComponent },
+  { path: 'docheckx', component: DoCheckParentComponent},
+  { path: 'aftecont', component: AfterContentInitParentComponent},
+  { path: '**', pathMatch: 'full', redirectTo: 'pruebelo' },
 ];
 
 // Un módulo es una forma de organizar componentes e inclusive otros módulos

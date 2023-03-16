@@ -1,8 +1,31 @@
 <nav id="navbar" class="navbar">
     <ul>
-        <li>
-            <a routerLink="/home" routerLinkActive="active">estados</a>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle show" href="#" data-bs-toggle="dropdown"
+                aria-expanded="true">Angular</a>
+            <ul class="dropdown-menu show" data-bs-popper="static">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle show" href="#" data-bs-toggle="dropdown"
+                    aria-expanded="true">lifecycle components</a>
+                    <ul class="dropdown-menu show" data-bs-popper="static">
+                        <li>
+                            <a class="dropdown-item" routerLink="/onchange" routerLinkActive="active">ngOnChanges</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/docheckx" routerLinkActive="active">ngDoCheck</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/aftecont" routerLinkActive="active">ngAfterContentInit</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
         </li>
+        <!-- <li>
+            <a routerLink="/home" routerLinkActive="active">estados</a>
+        </li> -->
         <li>
             <a routerLink="/pruebelo" routerLinkActive="active">pruébalo</a>
         </li>
@@ -11,6 +34,6 @@
                 ver carrito
             </a>
         </li>
-
+        
     </ul>
 </nav><!-- .navbar -->

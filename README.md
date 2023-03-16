@@ -35,7 +35,8 @@ COMANDOS UTILIZADOS
 31. npm install typescript@VERSION_NUMBER // Instalar versión específica de TypeScript
 32. npm install -g jasmine@VERSION_NUMBER // Instalar versión específica de Jasmine
 33. npm install -g karma@VERSION_NUMBER // Instalar versiún específica de Karma
-
+34. ng serve --port 4201 // Levantar el proyecto en un puerto específico
+35. npm install bootstrap jquery @popperjs/core // instalar bootstrap, jquery y @popperjs
 
 COMPONENTE:
 
